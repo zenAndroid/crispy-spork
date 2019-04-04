@@ -123,6 +123,13 @@ public class somFrame extends JFrame {
 		contentPane.add(btnAdd, gbc_btnAdd);
 
 		btnSubstract = new JButton("Substract");
+		btnSubstract.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				answerLabel.setText(Double
+						.toString((Double.parseDouble(txtInput.getText()) - Double.parseDouble(txtInput2.getText()))));
+			}
+		});
 		GridBagConstraints gbc_btnSubstract = new GridBagConstraints();
 		gbc_btnSubstract.insets = new Insets(0, 0, 5, 5);
 		gbc_btnSubstract.gridx = 2;
@@ -130,6 +137,13 @@ public class somFrame extends JFrame {
 		contentPane.add(btnSubstract, gbc_btnSubstract);
 
 		btnMultiply = new JButton("Multiply");
+		btnMultiply.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				answerLabel.setText(Double
+						.toString((Double.parseDouble(txtInput.getText()) * Double.parseDouble(txtInput2.getText()))));
+			}
+		});
 		GridBagConstraints gbc_btnMultiply = new GridBagConstraints();
 		gbc_btnMultiply.insets = new Insets(0, 0, 5, 5);
 		gbc_btnMultiply.gridx = 2;
@@ -137,6 +151,13 @@ public class somFrame extends JFrame {
 		contentPane.add(btnMultiply, gbc_btnMultiply);
 
 		btnDivide = new JButton("Divide");
+		btnDivide.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				answerLabel.setText(Double
+						.toString((Double.parseDouble(txtInput.getText()) / Double.parseDouble(txtInput2.getText()))));
+			}
+		});
 		GridBagConstraints gbc_btnDivide = new GridBagConstraints();
 		gbc_btnDivide.insets = new Insets(0, 0, 5, 5);
 		gbc_btnDivide.gridx = 2;
